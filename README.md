@@ -37,7 +37,7 @@ vue-express-weather-app/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/vue-express-weather-app.git
+git clone https://github.com/Oscar-Sherelis/vue-express-weather-app
 cd vue-express-weather-app
 ```
 
