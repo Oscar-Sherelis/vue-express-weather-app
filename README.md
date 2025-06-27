@@ -31,3 +31,44 @@ vue-express-weather-app/
 │   ├── tests/          # Jest test files
 │   ├── .env.example    # API key template
 │   └── index.js        # Entry point
+```
+## ⚙️ Setup Instructions
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/vue-express-weather-app.git
+cd vue-express-weather-app
+```
+
+### Backend
+```bash
+cd server
+npm install
+```
+#### Add Environment Variables
+```bash
+# Create the .env file
+touch .env
+```
+```text
+# .env
+OPENWEATHER_API_KEY=your_api_key_here
+```
+#### Run the Backend
+```bash
+npm run dev
+```
+
+### Frontend
+```bash
+cd client
+npm install
+npm run dev
+```
+
+## Run Tests (Backend)
+```bash
+cd server
+npm test
+```

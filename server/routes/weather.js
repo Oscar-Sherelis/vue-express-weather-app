@@ -22,10 +22,14 @@ router.get("/", async (req, res) => {
   let sanitizedCity = value.city;
   sanitizedCity = validator.escape(sanitizedCity); // Escape HTML special chars
   sanitizedCity = validator.stripLow(sanitizedCity); // Remove control chars
-  sanitizedCity = validator.whitelist(sanitizedCity, 'a-zA-Z\\s-'); // Allow only letters, spaces, hyphens
+  sanitizedCity = validator.whitelist(sanitizedCity, "a-zA-Z\\s-"); // Allow only letters, spaces, hyphens
 
   try {
     const apiKey = process.env.OPENWEATHER_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "API key is not configured." });
+    }
 
     // Used 2.5, because version 3 requires latitude and longitude
     const response = await axios.get(
