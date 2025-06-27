@@ -54,6 +54,7 @@ touch .env
 ```text
 # .env
 OPENWEATHER_API_KEY=your_api_key_here
+PORT=5000
 ```
 #### Run the Backend
 ```bash
